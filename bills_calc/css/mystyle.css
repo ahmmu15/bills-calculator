@@ -1,0 +1,50 @@
+body {
+  font-family: 'Roboto', sans-serif !important;
+  background: #f6f6f6
+}
+.page_title {
+  margin-top: 3%;
+  font-weight: 600
+}
+#calcBtn, .alertify .ajs-footer .ajs-buttons .ajs-button.ajs-ok {
+  color: white !important;
+  border-color: #0071ce;
+  background-color: #007ee5;
+  background: -webkit-linear-gradient(#007ee5, #0071ce);
+  background: linear-gradient(#007ee5, #0071ce);
+}
+.alertify .ajs-footer .ajs-buttons .ajs-button.ajs-ok {
+  font-size: 1em !important;
+  text-transform: capitalize !important;
+}
+#gas, #power, #water, #internet {
+  background: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0 1px #eee;
+  margin-bottom: 5px;
+}
+
+
+
+/*responsive style*/
+@media (max-width: 480px) {
+  .page_title {
+    text-align: center;
+  }
+  #gas .three, #power .three, #water .three, #internet .three{
+    width: calc(100% / 2 - 5px) !important;
+    margin-right: 5px;
+  }
+  #gas .three:last-child, #power .three:last-child, #water .three:last-child, #internet .three:last-child {
+    margin-right: 0;
+    float: right;
+  }
+  #results {
+    text-align: center;
+  }
+  /*hr {
+    display: none;
+  }*/
+
+}

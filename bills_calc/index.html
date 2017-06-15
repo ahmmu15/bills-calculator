@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Bills Calc</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Roboto:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/mystyle.css">
+  <link rel="stylesheet" href="css/alertify.min.css">
+  <link rel="stylesheet" href="css/default.min.css">
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="ten columns offset-by-one">
+        <h4 class="page_title">Bills Calculator</h4>
+        <hr>
+
+        <div id="inputs">
+          <form>
+            <!-- gas bill input -->
+            <div id="gas" class="row">
+              <div class="six columns">
+                <label for="gasBill">Gas bill</label>
+                <input class="u-full-width" type="text" placeholder="Price in Turkish Lira" maxlength="6" id="gasBill">
+              </div>
+              <div class="three columns">
+                <label for="division">Divided by</label>
+                <select class="u-full-width" id="gasDivision">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                </select>
+              </div>
+              <div class="three columns">
+                <label for="gasBillPerPerson">Per Person</label>
+                <input class="u-full-width" type="text" placeholder="" id="gasBillPerPerson" disabled="disabled">
+              </div>
+            </div>
+            <!-- power bill input -->
+            <div id="power" class="row">
+              <div class="six columns">
+                <label for="powerBill">Power bill</label>
+                <input class="u-full-width" type="text" placeholder="Price in Turkish Lira" maxlength="6" id="powerBill">
+              </div>
+              <div class="three columns">
+                <label for="division">Divided by</label>
+                <select class="u-full-width" id="powerDivision">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                </select>
+              </div>
+              <div class="three columns">
+                <label for="powerBillPerPerson">Per Person</label>
+                <input class="u-full-width" type="text" placeholder="" id="powerBillPerPerson" disabled="disabled">
+              </div>
+            </div>
+            <!-- water bill input -->
+            <div id="water" class="row">
+              <div class="six columns">
+                <label for="waterBill">Water bill</label>
+                <input class="u-full-width" type="text" placeholder="Price in Turkish Lira" maxlength="6" id="waterBill">
+              </div>
+              <div class="three columns">
+                <label for="division">Divided by</label>
+                <select class="u-full-width" id="waterDivision">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                </select>
+              </div>
+              <div class="three columns">
+                <label for="waterBillPerPerson">Per Person</label>
+                <input class="u-full-width" type="text" placeholder="" id="waterBillPerPerson" disabled="disabled">
+              </div>
+            </div>
+            <!-- internet bill input -->
+            <div id="internet" class="row">
+              <div class="six columns">
+                <label for="internetBill">Internet bill</label>
+                <input class="u-full-width" type="text" placeholder="Price in Turkish Lira" maxlength="6" id="internetBill">
+              </div>
+              <div class="three columns">
+                <label for="division">Divided by</label>
+                <select class="u-full-width" id="internetDivision">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                </select>
+              </div>
+              <div class="three columns">
+                <label for="internetBillPerPerson">Per Person</label>
+                <input class="u-full-width" type="text" placeholder="" id="internetBillPerPerson" disabled="disabled">
+              </div>
+            </div>
+            <hr>
+            <div id="results" class="row">
+              <div class="six columns">
+                <button class="button-primary" id="calcBtn">Calculate</button>
+              </div>
+              <div class="six columns">
+                <input class="u-full-width" type="text" placeholder="Total price per person" id="total" disabled="disabled">
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script src="js/alertify.min.js"></script>
+  <script type="text/javascript" src="js/myjs.js"></script>
+</body>
+</html>
